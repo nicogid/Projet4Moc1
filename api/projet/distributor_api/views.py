@@ -1,10 +1,9 @@
+from _datetime import datetime
 from django.shortcuts import render
+
+#Pour importer du html ou du json
 from django.http import HttpResponse
 
 def home_test(request):
-    """ Exemple de page HTML, non valide pour que l'exemple soit concis """
+    return render(request, 'distributor_api/home.html',{'date':datetime.now()})
 
-    text = """<h1>Bienvenue sur l'api !</h1>"""
-
-    return HttpResponse(text)
-# Create your views here.
