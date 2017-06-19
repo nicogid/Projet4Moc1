@@ -7,6 +7,8 @@ Electronique :
 
 -	Doc shield ethernet : https://www.arduino.cc/en/Main/ArduinoEthernetShield
 
+- OC shield ethernet : https://openclassrooms.com/courses/perfectionnez-vous-dans-la-programmation-arduino/decouvrez-le-shield-internet-et-le-lecteur-de-carte-sd
+
 
 Api : 
 -	Django documentation : https://www.djangoproject.com/
