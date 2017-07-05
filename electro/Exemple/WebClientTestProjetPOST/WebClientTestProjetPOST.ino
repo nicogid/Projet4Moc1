@@ -22,7 +22,7 @@
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 // if you don't want to use DNS (and reduce your sketch size)
 // use the numeric IP instead of the name for the server:
-IPAddress server(192,168,1,23);  // numeric IP for Google (no DNS)
+IPAddress server(192,168,1,16);  // numeric IP for Google (no DNS)
 //char server[] = "www.google.com";    // name address for Google (using DNS)
 
 // Set the static IP address to use if the DHCP fails to assign
@@ -57,7 +57,7 @@ void setup() {
     Serial.println("connected");
     // Make a HTTP request:
     client.println("POST /api/addsensor HTTP/1.1");                    
-    client.println("Host: 192.168.1.23");
+    client.println("Host: 192.168.1.16");
     client.println("Content-Type: application/x-www-form-urlencoded");
     client.println("Connection: close");
     client.println("User-Agent: Arduino/1.0");
