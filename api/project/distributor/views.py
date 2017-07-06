@@ -12,7 +12,7 @@ from rest_framework import status
 from rest_framework.exceptions import ParseError
 from rest_framework.parsers import JSONParser
 
-from .auth import get_or_create_token, get_basic_auth
+from .auth import get_or_create_token, get_basic_auth, check_request_token
 from .models import  Sensor
 from .serializers import SensorSerializer, UserSerializer
 
@@ -77,3 +77,36 @@ def login(request):
             token = get_or_create_token(user)
             return JsonResponse(data={'token': token.hash})
     return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
+
+
+def listSensor(request):
+    sensor = Sensor.objects.all()
+    serializer = SensorSerializer(sensor, many=True)
+    return JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+
+
+def create_sensor(request):
+    try:
+        data = JSONParser().parse(request)
+    except ParseError:
+        return HttpResponse(status=400)
+    serializer = SensorSerializer(data=data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@csrf_exempt
+def sensorsauth(request):
+    if request.method == 'GET':
+        return listSensor(request)
+    elif request.method == 'POST':
+        authorized = check_request_token(request)
+        if authorized:
+            return create_sensor(request)
+        else:
+            return HttpResponse(status=status.HTTP_401_UNAUTHORIZED)
+    else:
+        return HttpResponse(status=status.HTTP_405_METHOD_NOT_ALLOWED)
