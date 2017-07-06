@@ -5,4 +5,6 @@ urlpatterns = [
     url(r'^$', views.home_test),
     url(r'^sensors$', views.list_sensor, name="listsensor"),
     url(r'^addsensor$', views.add_sensor, name="addsensor"),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^users/$', views.users, name='user'),
 ]
