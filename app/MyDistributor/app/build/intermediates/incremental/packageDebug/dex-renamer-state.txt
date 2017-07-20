@@ -1,7 +1,0 @@
-#Wed Jun 28 17:44:32 CEST 2017
-base.0=C\:\\Users\\gidon\\Documents\\Projet4Moc1\\app\\MyDistributor\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2403bdd5d83a2319b3887e117799a9c0a464939d
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\gidon\\Documents\\Projet4Moc1\\app\\MyDistributor\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_eadfe9162104978727f77c822b06ae746e690421\\classes.dex
-base.1=C\:\\Users\\gidon\\Documents\\Projet4Moc1\\app\\MyDistributor\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_eadfe9162104978727f77c822b06ae746e690421
-file.0=C\:\\Users\\gidon\\Documents\\Projet4Moc1\\app\\MyDistributor\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2403bdd5d83a2319b3887e117799a9c0a464939d\\classes.dex
