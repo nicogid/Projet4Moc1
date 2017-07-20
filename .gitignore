@@ -1,0 +1,9 @@
+# Les ligne commençant par '#' sont des commentaires.
+# Ignorer tous les fichiers nommés .idea
+.idea
+
+# Enlever .idea en ligne de commande 
+# $ echo '.idea' >> .gitignore
+# $ git add .gitignore
+# $ git commit -m '(some message stating you added .idea to ignored entries)'
+# $ git push
